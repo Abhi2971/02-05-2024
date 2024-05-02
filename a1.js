@@ -31,6 +31,8 @@
 
 class animal{
     // #color;  it is private 
+    static className = "in animal class";
+    static count=0;
     color;
     height;
     weight;
@@ -42,7 +44,7 @@ class animal{
         this.weight = weight;
         this.height = height;
         this.#hairColor=hairColor;
-
+        animal.count += 1;
     }
     eats(){
 
@@ -95,3 +97,7 @@ let yourDog = new Dog("red",10,1,"chicken","black","white");
 yourDog.color;
 yourDog.barking();
 yourDog.sleep();//it override with animal 
+
+// static Function
+ 
+console.log(animal.count);
