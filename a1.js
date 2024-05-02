@@ -48,7 +48,7 @@ class animal{
 
     }
     sleep(){
-
+        console.log("abhi");
     }
     running(){
 
@@ -71,3 +71,27 @@ console.log(myCat.hairColor);
 // getter
 myCat.hairColor = "pink";
 console.log(myCat.hairColor);
+
+// INHERITANCE
+
+class Dog extends animal{
+    tailColor;
+
+    constructor(color,height,weight,food,hairColor,tailColor){
+        super();//it inherit the all properties of animal
+        this.tailColor = tailColor;
+    }
+    barking(){
+
+    }
+    sleep(){
+        console.log("AbhiShek");// overriding with sleep function in animal class
+    }
+}
+class Cat extends animal{
+
+}
+let yourDog = new Dog("red",10,1,"chicken","black","white");
+yourDog.color;
+yourDog.barking();
+yourDog.sleep();//it override with animal 
